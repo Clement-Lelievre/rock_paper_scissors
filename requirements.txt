@@ -2,5 +2,4 @@ opencv-python==4.5.5.64
 tensorflow==2.8.0
 streamlit==1.9.2
 numpy
-python3-opencv
 opencv-python-headless
