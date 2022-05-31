@@ -5,19 +5,22 @@ import numpy as np
 
 st.title('Rock, paper, scissors image recognition')
 
+model = get_model()
+preds = ['paper', 'rock', 'scissors']
+preds_emoji = ['📜', '⛰️', '✂️']
+
 cam = st.camera_input('Take a screenshot and get a prediction')
+
 if cam:
     save_image(cam)
-model = get_model()
-
+    # ind = np.argmax(model.predict(load_preproc_img(cam), batch_size=1))
+    # pred_emoji = preds_emoji[ind]
+    # st.write(pred_emoji)
 # run = st.checkbox('run')
 # FRAME_WINDOW = st.image([])
 # cam = cv2.VideoCapture(0)
-preds = ['paper', 'rock', 'scissors']
-preds_emoji = ['📜', '⛰️', '✂️']
-ind = np.argmax(model.predict(load_preproc_img(cam), batch_size=1))
-pred_emoji = preds_emoji[ind]
-st.write(pred_emoji)
+    
+    
 # while run:
 #     ret, frame = cam.read()
 #     frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
