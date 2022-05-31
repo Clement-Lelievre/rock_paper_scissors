@@ -14,3 +14,9 @@ def load_preproc_img(img: np.array) -> np.array:
 @st.experimental_singleton
 def get_model():
     return load_model('rock_paper_scissors_CNN.h5')
+
+@st.experimental_show
+def save_image(file) -> None:
+    '''Saves locally the attached file.'''
+    with open(file.name,"wb") as f:
+        f.write(file.getbuffer())
