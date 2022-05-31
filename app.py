@@ -13,9 +13,13 @@ cam = st.camera_input('Take a screenshot and get a prediction')
 
 if cam:
     filename = save_image(cam)
-    ind = np.argmax(model.predict(load_preproc_img(filename), batch_size=1))
-    pred_emoji = preds_emoji[ind]
-    st.write(pred_emoji)
+    prediction_array = model.predict(load_preproc_img(filename), batch_size=1)
+    if prediction_array.max() >= 0.8:
+        ind = np.argmax(prediction_array)
+        pred_emoji = preds_emoji[ind]
+        st.write(f"I'd say {pred_emoji}")
+    else:
+        st.write('Unclear...')
 # run = st.checkbox('run')
 # FRAME_WINDOW = st.image([])
 # cam = cv2.VideoCapture(0)
