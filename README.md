@@ -13,3 +13,5 @@ Also, because the total size of the project exceeds Heroku limits (500 mB), I'll
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/clement-lelievre/rock_paper_scissors/app.py)
 
 This is a draft and was prototyped quickly (no fine-tuning, model ran on 3 epochs etc.). An obvious lead of improvement comes from the fact that dataset images have a white background unlike snapshots, so processing images to account for this fact will likely result in sharp improvements of model accuracy in production.
+
+Also, it is possible to make predictions on a live webcam feed in Streamlit instead of screenshots: although not officially supported, the library webrtc allows to do so
