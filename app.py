@@ -12,8 +12,8 @@ preds_emoji = ['📜', '⛰️', '✂️']
 cam = st.camera_input('Take a screenshot and get a prediction')
 
 if cam:
-    save_image(cam)
-    ind = np.argmax(model.predict(load_preproc_img(cam), batch_size=1))
+    filename = save_image(cam)
+    ind = np.argmax(model.predict(load_preproc_img(filename), batch_size=1))
     pred_emoji = preds_emoji[ind]
     st.write(pred_emoji)
 # run = st.checkbox('run')

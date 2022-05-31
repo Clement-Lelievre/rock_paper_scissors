@@ -1,5 +1,6 @@
-opencv-python==4.5.5.64 
+#opencv-python==4.5.5.64 
 tensorflow==2.8.0
 streamlit==1.9.2
 numpy
-opencv-python-headless==4.5.5.64 
+Pillow
+#opencv-python-headless==4.5.5.64 
