@@ -1,5 +1,5 @@
 import numpy as np
-import cv2
+#import cv2
 from tensorflow.keras.models import load_model
 import streamlit as st
 
@@ -15,7 +15,7 @@ def load_preproc_img(img: np.array) -> np.array:
 def get_model():
     return load_model('rock_paper_scissors_CNN.h5')
 
-@st.experimental_show
+@st.experimental_memo
 def save_image(file) -> None:
     '''Saves locally the attached file.'''
     with open(file.name,"wb") as f:
