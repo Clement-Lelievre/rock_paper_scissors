@@ -1,12 +1,13 @@
 #import cv2
 import streamlit as st
-from utils import get_model, load_preproc_img
+from utils import get_model, load_preproc_img, save_image
 import numpy as np
 
 st.title('Rock, paper, scissors image recognition')
 
 cam = st.camera_input('Take a screenshot and get a prediction')
-
+if cam:
+    save_image(cam)
 model = get_model()
 
 # run = st.checkbox('run')
