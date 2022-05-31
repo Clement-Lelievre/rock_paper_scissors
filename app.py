@@ -13,6 +13,7 @@ cam = st.camera_input('Take a screenshot and get a prediction')
 
 if cam:
     save_image(cam)
+    st.image(cam.name)
     # ind = np.argmax(model.predict(load_preproc_img(cam), batch_size=1))
     # pred_emoji = preds_emoji[ind]
     # st.write(pred_emoji)
