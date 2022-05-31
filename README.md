@@ -1,0 +1,1 @@
+transfer learning from VGG16 using Tensorflow and Keras. The goal is to create an app where the model recognizes hand pose live (rock, paper, or scissor). the dataset has been found on laurence Moroney's personal website
