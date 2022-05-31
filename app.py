@@ -4,6 +4,7 @@ from utils import get_model, load_preproc_img
 import numpy as np
 
 st.title('Rock, paper, scissors image recognition')
+cam = st.camera_input('camera screenshots')
 
 model = get_model()
 
